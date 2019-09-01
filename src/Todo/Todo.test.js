@@ -1,16 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "../setupTests";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 
-import Todo from ".";
+import Todo from "./Todo";
 
 describe(Todo, () => {
   const description = "New Todo";
   const mockRemoveTodo = jest.fn();
   const component = shallow(
-    <Todo description={description} removeTodo={mockRemoveTodo} />
+    <Todo
+      description={description}
+      removeTodo={mockRemoveTodo}
+      critical={false}
+      done={false}
+      id={1}
+    />
   );
 
   it("renders without crashing", () => {

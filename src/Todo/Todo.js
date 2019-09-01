@@ -5,45 +5,36 @@ import styles from "./Todo.module.scss";
 class Todo extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      critical: false,
-      done: false
+      done: props.done,
+      critical: props.critical
     };
 
     this.markAsDone = this.markAsDone.bind(this);
-    this.markCritical = this.markCritical.bind(this);
     this.removeTodo = this.removeTodo.bind(this);
+    this.markCritical = this.markCritical.bind(this);
   }
-
+  markCritical() {
+    this.setState({ critical: true });
+  }
+  markAsDone() {
+    this.setState({ done: true });
+  }
+  removeTodo() {
+    this.props.removeTodo(this.props.id);
+  }
   cssClasses() {
-    let classes = [styles.todo];
-
+    let classes = [];
     if (this.state.critical) {
       classes = [styles.critical];
     } else {
       classes = [styles.todo];
     }
-
     if (this.state.done) {
       classes = [...classes, styles.done];
     }
-
     return classes.join(" ");
   }
-
-  markAsDone() {
-    this.setState({ done: true });
-  }
-
-  markCritical() {
-    this.setState({ critical: true });
-  }
-
-  removeTodo() {
-    this.props.removeTodo(this.props.description);
-  }
-
   render() {
     return (
       <div className={this.cssClasses()}>

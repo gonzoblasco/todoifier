@@ -1,2 +1,2 @@
-import NewTodo from "./NewTodo";
+import NewTodo from './NewTodo';
 export default NewTodo;
