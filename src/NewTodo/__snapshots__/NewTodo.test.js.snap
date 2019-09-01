@@ -2,7 +2,7 @@
 
 exports[`NewTodo renders and matches our snapshot 1`] = `
 <div
-  className="NewTodo"
+  className="newtodo"
 >
   <div
     className="input-group"

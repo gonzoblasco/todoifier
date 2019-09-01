@@ -2,10 +2,10 @@
 
 exports[`TodoList renders and matches our snapshot 1`] = `
 <div
-  className="TodoList"
+  className="todolist"
 >
   <div
-    className="NewTodo"
+    className="newtodo"
   >
     <div
       className="input-group"

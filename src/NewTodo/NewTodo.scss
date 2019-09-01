@@ -1,0 +1,9 @@
+@import '../shared';
+
+.newtodo {
+  background: $todolist-grey;
+  border: 2px solid $todolist-aqua;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}

@@ -1,7 +1,7 @@
-@import "../shared";
+@import '../shared';
 
 hr {
+  background-image: $fancy-gradient;
   border: 0;
   height: 1px;
-  background-image: $fancy-gradient;
 }

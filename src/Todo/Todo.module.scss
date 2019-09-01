@@ -1,12 +1,12 @@
-@import "../shared";
+@import '../shared';
 
 .todo {
-  border: 2px solid black;
-  text-align: center;
   background: $todo-normal;
-  color: #333;
+  border: 2px solid $black;
+  color: $todolist-grey;
   margin: 20px;
   padding: 20px;
+  text-align: center;
 }
 
 .done {
@@ -14,10 +14,10 @@
 }
 
 .hr {
-  border: 2px solid red;
+  border: 2px solid $red;
 }
 
 .critical {
-  composes: todo;
   background: $todo-critical;
+  composes: todo;
 }

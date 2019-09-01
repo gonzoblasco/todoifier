@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 import Todo from "../Todo/Todo";
-import "./TodoList.css";
+import "./TodoList.scss";
 
 import NewTodo from "../NewTodo";
 import Divider from "../Divider";
@@ -67,7 +67,7 @@ class TodoList extends Component {
   }
   render() {
     return (
-      <div className="TodoList">
+      <div className="todolist">
         <NewTodo addTodo={this.addTodo} />
         {this.renderItems()}
       </div>

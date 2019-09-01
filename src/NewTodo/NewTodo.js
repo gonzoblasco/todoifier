@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Input, InputGroup } from "reactstrap";
-import "./NewTodo.css";
+import "./NewTodo.scss";
 
 class NewTodo extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class NewTodo extends Component {
   }
   render() {
     return (
-      <div className="NewTodo">
+      <div className="newtodo">
         <InputGroup>
           <Input
             type="text"

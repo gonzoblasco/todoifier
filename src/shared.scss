@@ -1,9 +1,14 @@
+$black: #000;
+$grey: #ccc;
+$red: #f00;
 $todo-critical: #f5a5a5;
 $todo-normal: #a5a5f5;
 $todo-complete: #a5f5a5;
+$todolist-aqua: #00d8ff;
+$todolist-grey: #def;
 $fancy-gradient: linear-gradient(
   to right,
   rgba(0, 0, 0, 0),
-  rgba(0, 0, 0, 0.8),
+  rgba(0, 0, 0, .8),
   rgba(0, 0, 0, 0)
 );
