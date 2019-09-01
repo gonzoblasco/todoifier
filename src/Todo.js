@@ -6,7 +6,6 @@ class Todo extends Component {
     super(props);
 
     this.state = {
-      description: props.description,
       done: false
     };
 
@@ -29,18 +28,23 @@ class Todo extends Component {
   }
 
   removeTodo() {
-    this.props.removeTodo(this.state.description);
+    this.props.removeTodo(this.props.description);
   }
 
   render() {
     return (
       <div className={this.cssClasses()}>
-        {this.state.description}
+        {this.props.description}
         <br />
-        <button onClick={this.markAsDone}>Mark as Done</button>
-        <button onClick={this.removeTodo}>Remove Me</button>
+        <button className="MarkDone" onClick={this.markAsDone}>
+          Mark as Done
+        </button>
+        <button className="RemoveTodo" onClick={this.removeTodo}>
+          Remove Me
+        </button>
       </div>
     );
   }
 }
+
 export default Todo;

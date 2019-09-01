@@ -38,7 +38,7 @@ class TodoList extends Component {
 
   renderItems() {
     return this.state.items.map(description => (
-      <Fragment key={"div-" + description}>
+      <Fragment key={"item-" + description}>
         <Todo
           key={description}
           description={description}
