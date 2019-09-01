@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./setupTests";
+import "../setupTests";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import Adapter from "enzyme-adapter-react-16";
 
-import TodoList from "./TodoList";
-import NewTodo from "./NewTodo";
-import Todo from "./Todo";
+import TodoList from ".";
+import NewTodo from "../NewTodo";
+import Todo from "../Todo";
 
 describe(TodoList, () => {
   const component = shallow(<TodoList />);

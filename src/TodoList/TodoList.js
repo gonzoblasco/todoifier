@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
-import Todo from "./Todo";
+import Todo from "../Todo/Todo";
 import "./TodoList.css";
 
-import NewTodo from "./NewTodo";
-import Divider from "./Divider";
+import NewTodo from "../NewTodo/NewTodo";
+import Divider from "../Divider";
 
 class TodoList extends Component {
   constructor(props) {

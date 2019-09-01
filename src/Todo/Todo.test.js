@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./setupTests";
+import "../setupTests";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 
-import Todo from "./Todo";
+import Todo from ".";
 
 describe(Todo, () => {
   const description = "New Todo";
@@ -34,12 +34,18 @@ describe(Todo, () => {
   });
 
   it("marks the Todo as done", () => {
-    component.find("button.MarkDone").simulate("click");
+    component.find("Button.MarkDone").simulate("click");
     expect(component.state("done")).toEqual(true);
   });
 
   it("calls the mock remove function", () => {
-    component.find("button.RemoveTodo").simulate("click");
+    component.find("Button.RemoveTodo").simulate("click");
     expect(mockRemoveTodo).toHaveBeenCalled();
+  });
+
+  it("marks the Todo as critical", () => {
+    expect(component.state("critical")).toEqual(false);
+    component.find("Button.MarkCritical").simulate("click");
+    expect(component.state("critical")).toEqual(true);
   });
 });
